@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DOM Nodes</title>
+</head>
+<body>
+<div id="div1">
+    <p id="p1">This is a paragraph.</p>
+    <p id="p2">This is another paragraph.</p>
+</div>
+
+<script>
+    const para = document.createElement("p");
+    const node = document.createTextNode("This is new.");
+    para.appendChild(node);
+
+    const parent = document.getElementById("div1");
+    const child = document.getElementById("p1");
+    parent.replaceChild(para, child);
+</script>
+
+</body>
+</html>
